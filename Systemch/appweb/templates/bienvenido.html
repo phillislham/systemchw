@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pages-register</title>
+</head>
+<body>
+    <h1> Bievenido Registra tus horas laboradas</h1>
+        <div>
+        Numero de registros: {{numero_registros}}
+    </div>
+    <div>
+        <ul>
+            {% for registro in registros %}
+                <li>Registro {{registro.id}}:
+                    {{registro.codigojira}}
+                    {{registro.nombre}}
+                    {{registro.horas}}
+                    {{registro.fecha}}
+                    {{rol}}
+                    <a href="detalle_registro/{{registro.id}}">Ver detalle</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
