@@ -17,11 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from Systemch.views import detalleRegistro
+#from Systemch.views import detalleRegistro
 from appweb.views import bienvenido
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', bienvenido),
-    path('detalle_registro/<int:id>', detalleRegistro)
+    #path('detalle_registro/<int:id>', detalleRegistro)
 ]
