@@ -7,12 +7,12 @@
 <body>
     <h1> Bievenido Registra tus horas laboradas</h1>
         <div>
-        Numero de registros: {{numero_registros}}
+        Numero de registros: {{registro_var}}
     </div>
     <div>
         <ul>
             {% for registro in registros %}
-                <li>Registro {{registro.id}}:
+                <li>Registro {{registro.id}}
                     {{registro.codigojira}}
                     {{registro.nombre}}
                     {{registro.horas}}

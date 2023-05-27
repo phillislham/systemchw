@@ -19,9 +19,10 @@ from django.urls import path
 
 #from Systemch.views import detalleRegistro
 from appweb.views import bienvenido
+from employees.views import detalle_registro
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', bienvenido),
-    #path('detalle_registro/<int:id>', detalleRegistro)
+    path('detalle_registro/<int:id>', detalle_registro)
 ]

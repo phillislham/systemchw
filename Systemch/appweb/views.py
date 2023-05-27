@@ -1,6 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-# Cretae your wiews here
+from employees.models import Registro
+
+
+# #Create your views hare.
 def bienvenido(request):
-    return HttpResponse('Hola Django des de ')
+     registro_var = Registro.objects.count()
+     registros = Registro.objects.all()
+     return render(request, 'bienvenido.html', {'registro':registro_var, 'registros': registros})
